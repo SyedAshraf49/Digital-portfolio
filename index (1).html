@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Syed Ashraf S.N - A Computer Science student passionate about Cybersecurity, AI, and Cloud Computing.">
+    <title>Portfolio | Syed Ashraf S.N</title>
+    
+    <style>
+        /* Importing a modern Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1E1E2E; /* Modern Dark Theme */
+            color: #FFFFFF;
+        }
+
+        header {
+            background-color: #4A90E2; /* Clean Blue */
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .header-content {
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px;
+            border: 3px solid #fff;
+            max-width: 100%; /* Mobile Optimization */
+            height: auto;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #2C3E50;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4A90E2;
+        }
+
+        .section-content {
+            background-color: #323C50;
+            padding: 2rem;
+            margin: 1rem auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: justify;
+            max-width: 80%;
+        }
+
+        .download-button {
+            background-color: #E74C3C;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .download-button:hover {
+            background-color: #C0392B;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #34495E;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Syed Ashraf S.N</h1>
+            <p>College Student | Tech Enthusiast</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>
+                Hey there! I'm a <strong>college student</strong> navigating the ups and downs of 
+                academics, personal growth, and everything in between.
+            </p>
+            <p>
+                I'm passionate about <strong>technology, art, and sports</strong>—always eager to learn new 
+                things and explore creative ideas. Whether it's <strong>coding</strong>, 
+                <strong>problem-solving</strong>, or <strong>building projects</strong>, I love pushing boundaries 
+                and improving my skills.
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>BSc (Computer Science)</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Cybersecurity</li>
+                <li>Internet of Things</li>
+                <li>Cloud Computing</li>
+                <li>Python</li>
+                <li>IBM Cloud</li>
+                <li>ML & AI</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://github.com/your-username/AI-Alternator" target="_blank">AI-Based Alternator Control System</a></li>
+                <li><a href="https://github.com/your-username/Cloud-Security" target="_blank">Cloud Security IBM</a></li>
+                <li><a href="https://github.com/your-username/IBM-Chatbot" target="_blank">IBM Chatbot</a></li>
+                <li><a href="https://github.com/your-username/Chatbot" target="_blank">Chatbot</a></li> 
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content" style="text-align: center;">
+            <h2>Resume</h2>
+            <a href="mycv.pdf" download="Syed_Ashraf_CV.pdf" class="download-button">Download CV</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Syed Ashraf S.N</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
