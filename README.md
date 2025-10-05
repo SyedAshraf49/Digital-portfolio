@@ -6,31 +6,31 @@ Hi! I'm **Syed Ashraf S.N**, a Computer Science student passionate about **Cyber
 
 ## 🌐 Live Portfolio
 View the website live on GitHub Pages:  
-[Portfolio Demo](https://github.com/SyedAshraf49/your-repo-name)  
+[🌐 Portfolio Demo](https://github.com/SyedAshraf49/your-repo-name)  
 
 ---
 
 ## 💻 Skills
-- Cybersecurity  
-- Artificial Intelligence & Machine Learning  
-- Cloud Computing (IBM Cloud)  
-- Python  
-- JavaScript  
+- 🛡️ Cybersecurity  
+- 🧠 Artificial Intelligence & Machine Learning  
+- ☁️ Cloud Computing (IBM Cloud)  
+- 🐍 Python  
+- 💻 JavaScript  
 
 ---
 
 ## 🚀 Projects
-- **[Career Path Predictor (ML)](https://github.com/SyedAshraf49/career_predictor-.git)** – Predicts career paths using machine learning.  
-- **[Command Prompt Calculator](https://github.com/SyedAshraf49/cmd_cal.git)** – Simple command-line calculator.  
-- **[Health AI (IBM Cloud)](https://github.com/SyedAshraf49/health-AI.git)** – AI health monitoring system deployed on IBM Cloud.  
+- 🤖 **[Career Path Predictor (ML)](https://github.com/SyedAshraf49/career_predictor-.git)** – Predicts career paths using machine learning.  
+- 🖥️ **[Command Prompt Calculator](https://github.com/SyedAshraf49/cmd_cal.git)** – Simple command-line calculator.  
+- ❤️ **[Health AI (IBM Cloud)](https://github.com/SyedAshraf49/health-AI.git)** – AI health monitoring system deployed on IBM Cloud.  
 
 ---
 
-## 📫 Contact
-- GitHub: [@SyedAshraf49](https://github.com/SyedAshraf49)  
-- LinkedIn: [Syed Ashraf](https://www.linkedin.com/in/syed-ashraf49)  
-- Instagram: [@asher49_](https://www.instagram.com/asher49_)  
-- Email: galladeashraf@gmail.com  
+## 📫 Contact & Socials
+- [🐙 GitHub](https://github.com/SyedAshraf49)  
+- [💼 LinkedIn](https://www.linkedin.com/in/syed-ashraf49)  
+- [📸 Instagram](https://www.instagram.com/asher49_)  
+- [✉️ Email](mailto:galladeashraf@gmail.com)  
 
 ---
 
