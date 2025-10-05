@@ -6,7 +6,7 @@ Hi! I'm **Syed Ashraf S.N**, a Computer Science student passionate about **Cyber
 
 ## 🌐 Live Portfolio
 View the website live on GitHub Pages:  
-[🌐 Portfolio Demo](https://github.com/SyedAshraf49/your-repo-name)  
+[🌐 Portfolio Demo](https://github.com/SyedAshraf49/Portfolio.git)  
 
 ---
 
