@@ -5,30 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Syed Ashraf S.N - A Computer Science student passionate about Cybersecurity, AI, and Cloud Computing.">
   <title>Syed Ashraf S.N | Portfolio</title>
-  
-  <!-- Fonts & Icons -->
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/7d8cfe6b90.js" crossorigin="anonymous"></script>
+
+  <!-- ✅ Font Awesome CDN (updated working version) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #0f0f1a;
+      background-color: #0f0f10;
       color: #fff;
       overflow-x: hidden;
     }
 
     /* HEADER */
     header {
-      background: linear-gradient(135deg, #4A90E2, #9013FE);
+      background: linear-gradient(120deg, #4A90E2, #9013FE);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1.5rem;
       padding: 2rem 1rem;
       flex-wrap: wrap;
+      gap: 1.5rem;
       animation: gradientShift 10s ease infinite;
       background-size: 300% 300%;
     }
@@ -40,17 +42,18 @@
     }
 
     .profile-pic {
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       border: 3px solid #fff;
       object-fit: cover;
-      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      flex-shrink: 0;
     }
 
     .header-content {
       text-align: left;
-      max-width: 400px;
+      max-width: 500px;
     }
 
     .header-content h1 {
@@ -59,40 +62,60 @@
     }
 
     .header-content p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #e0e0e0;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
     .social-links a {
       color: #fff;
-      margin-right: 10px;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       transition: transform 0.3s, color 0.3s;
-      display: inline-block;
     }
 
-    .social-links a:hover { transform: translateY(-3px); color: #000; }
+    .social-links a:hover {
+      transform: scale(1.2);
+      color: #000;
+      background: #fff;
+      border-radius: 50%;
+      padding: 5px;
+    }
 
     /* NAVIGATION */
     nav {
       background-color: #181828;
       text-align: center;
-      padding: 10px 0;
+      padding: 0.7rem 0;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
-    nav ul { list-style: none; }
-    nav ul li { display: inline-block; margin: 0 12px; }
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 12px;
+    }
+
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s;
     }
-    nav ul li a:hover { color: #4A90E2; }
+
+    nav ul li a:hover {
+      color: #4A90E2;
+    }
 
     /* SECTION */
     section {
@@ -102,13 +125,12 @@
     }
 
     .section-content {
-      background-color: #1b1b2e;
-      padding: 1.8rem;
-      border-radius: 10px;
+      background-color: #1e1e2e;
+      padding: 2rem;
+      border-radius: 12px;
       box-shadow: 0 0 10px rgba(255,255,255,0.05);
       max-width: 850px;
       width: 100%;
-      text-align: justify;
       animation: fadeInUp 0.8s ease;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -139,7 +161,7 @@
     }
 
     .skill-card {
-      background-color: #23233a;
+      background-color: #2C2C3A;
       border-radius: 10px;
       text-align: center;
       padding: 1rem;
@@ -160,7 +182,7 @@
     /* PROJECTS */
     .project-list { list-style: none; padding-left: 0; }
     .project-list li {
-      margin: 10px 0;
+      margin: 12px 0;
       display: flex;
       align-items: center;
       font-size: 1rem;
@@ -169,7 +191,7 @@
     .project-list i {
       color: #4A90E2;
       margin-right: 10px;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
 
     .project-list a {
@@ -184,7 +206,7 @@
     .download-button {
       background-color: #E74C3C;
       color: #fff;
-      padding: 10px 25px;
+      padding: 10px 20px;
       border-radius: 25px;
       text-decoration: none;
       font-weight: 600;
@@ -202,10 +224,10 @@
     footer {
       text-align: center;
       padding: 1rem 0;
-      background-color: #121223;
+      background-color: #121222;
       color: #bbb;
       font-size: 0.9rem;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     html { scroll-behavior: smooth; }
@@ -217,7 +239,6 @@
     <div class="header-content">
       <h1>Syed Ashraf S.N</h1>
       <p>Computer Science Student | Cybersecurity & AI Enthusiast</p>
-
       <div class="social-links">
         <a href="https://github.com/SyedAshraf49" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/syed-ashraf49" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -243,7 +264,7 @@
       <p>
         Hi, I'm <strong>Syed Ashraf</strong> — a Computer Science student passionate about 
         <strong>Cybersecurity</strong>, <strong>Artificial Intelligence</strong>, and <strong>Cloud Computing</strong>. 
-        I love creating projects that bridge innovation with real-world impact, while continuously learning and exploring new technologies.
+        I enjoy solving real-world problems, building creative projects, and exploring new technologies that make an impact.
       </p>
     </div>
   </section>
