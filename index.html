@@ -1,212 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Syed Ashraf S.N - A Computer Science student passionate about Cybersecurity, AI, and Cloud Computing.">
-    <title>Portfolio | Syed Ashraf S.N</title>
-    
-    <style>
-        /* Importing a modern Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Syed Ashraf S.N - A Computer Science student passionate about Cybersecurity, AI, and Cloud Computing." />
+  <title>Syed Ashraf S.N | Portfolio</title>
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1E1E2E; /* Modern Dark Theme */
-            color: #FFFFFF;
-        }
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-        header {
-            background-color: #4A90E2; /* Clean Blue */
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-        }
+    /* ==== GLOBAL STYLES ==== */
+    :root {
+      --bg: #0f172a;
+      --text: #f1f5f9;
+      --card: #1e293b;
+      --accent: #38bdf8;
+      --accent-dark: #0ea5e9;
+    }
 
-        .header-content {
-            text-align: center;
-        }
+    [data-theme='light'] {
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --card: #e2e8f0;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+    }
 
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 10px;
-            border: 3px solid #fff;
-            max-width: 100%; /* Mobile Optimization */
-            height: auto;
-        }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-        .header-content h1 {
-            font-size: 2.5rem;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
 
-        nav {
-            background-color: #2C3E50;
-            text-align: center;
-            padding: 10px 0;
-        }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: white;
+      position: relative;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
+    .profile-pic:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #FFFFFF;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.3rem;
+    }
 
-        nav ul li a:hover {
-            color: #4A90E2;
-        }
+    #typing-text {
+      font-size: 1.1rem;
+      color: #fff;
+      font-weight: 400;
+      height: 25px;
+    }
 
-        .section-content {
-            background-color: #323C50;
-            padding: 2rem;
-            margin: 1rem auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-            text-align: justify;
-            max-width: 80%;
-        }
+    nav {
+      background-color: var(--card);
+      text-align: center;
+      padding: 0.8rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
 
-        .download-button {
-            background-color: #E74C3C;
-            color: #fff;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-        .download-button:hover {
-            background-color: #C0392B;
-        }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #34495E;
-            color: #fff;
-        }
+    nav ul li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-    </style>
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--card);
+      border: none;
+      border-radius: 20px;
+      padding: 8px 14px;
+      color: var(--text);
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background: var(--accent-dark);
+      color: white;
+    }
+
+    .section-content {
+      background-color: var(--card);
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      max-width: 80%;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .section-content.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-content h2 {
+      text-align: center;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .skill-badge {
+      background-color: var(--accent);
+      padding: 8px 15px;
+      border-radius: 20px;
+      color: white;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .skill-badge:hover {
+      background-color: var(--accent-dark);
+      transform: scale(1.1);
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: var(--bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--accent);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--accent);
+    }
+
+    .project-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .download-button {
+      background: linear-gradient(135deg, #e11d48, #be123c);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .download-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #f43f5e, #e11d48);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--card);
+      color: var(--text);
+      margin-top: 3rem;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--accent);
+      color: var(--bg);
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: var(--accent-dark);
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 600px) {
+      .section-content {
+        max-width: 90%;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="header-content">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-            <h1>Syed Ashraf S.N</h1>
-            <p>College Student | Tech Enthusiast</p>
-        </div>
-    </header>
+  <header>
+    <button class="theme-toggle" id="theme-toggle">🌙</button>
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
+    <h1>Syed Ashraf S.N</h1>
+    <div id="typing-text"></div>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+    </ul>
+  </nav>
 
-    <section id="about">
-        <div class="section-content">
-            <h2>About Me</h2>
-            <p>
-                Hey there! I'm a <strong>college student</strong> navigating the ups and downs of 
-                academics, personal growth, and everything in between.
-            </p>
-            <p>
-                I'm passionate about <strong>technology, art, and sports</strong>—always eager to learn new 
-                things and explore creative ideas. Whether it's <strong>coding</strong>, 
-                <strong>problem-solving</strong>, or <strong>building projects</strong>, I love pushing boundaries 
-                and improving my skills.
-            </p>
-        </div>
-    </section>
+  <section id="about" class="section-content">
+    <h2>About Me</h2>
+    <p>
+      I'm <strong>Syed Ashraf</strong>, a passionate Computer Science student exploring 
+      <strong>Cybersecurity, Artificial Intelligence</strong>, and <strong>Cloud Computing</strong>. 
+      I love building innovative solutions and continuously improving my technical and creative skills.
+    </p>
+  </section>
 
-    <section id="education">
-        <div class="section-content">
-            <h2>Education</h2>
-            <p>BSc (Computer Science)</p>
-        </div>
-    </section>
+  <section id="education" class="section-content">
+    <h2>Education</h2>
+    <p><strong>BSc in Computer Science</strong> — Focused on software development, data analytics, and modern cloud technologies.</p>
+  </section>
 
-    <section id="skills">
-        <div class="section-content">
-            <h2>Skills</h2>
-            <ul>
-                <li>Cybersecurity</li>
-                <li>Internet of Things</li>
-                <li>Cloud Computing</li>
-                <li>Python</li>
-                <li>IBM Cloud</li>
-                <li>ML & AI</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-    </section>
+  <section id="skills" class="section-content">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill-badge">Cybersecurity</div>
+      <div class="skill-badge">AI & ML</div>
+      <div class="skill-badge">Python</div>
+      <div class="skill-badge">IBM Cloud</div>
+      <div class="skill-badge">IoT</div>
+      <div class="skill-badge">Cloud Computing</div>
+      <div class="skill-badge">Java</div>
+      <div class="skill-badge">C++</div>
+      <div class="skill-badge">JavaScript</div>
+    </div>
+  </section>
 
-    <section id="projects">
-        <div class="section-content">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/your-username/AI-Alternator" target="_blank">AI-Based Alternator Control System</a></li>
-                <li><a href="https://github.com/your-username/Cloud-Security" target="_blank">Cloud Security IBM</a></li>
-                <li><a href="https://github.com/your-username/IBM-Chatbot" target="_blank">IBM Chatbot</a></li>
-                <li><a href="https://github.com/your-username/Chatbot" target="_blank">Chatbot</a></li> 
-            </ul>
-        </div>
-    </section>
+  <section id="projects" class="section-content">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <a href="https://github.com/your-username/AI-Alternator" target="_blank">AI-Based Alternator Control System</a>
+        <p>Designed an AI-driven alternator control model for optimizing energy output dynamically.</p>
+      </div>
+      <div class="project-card">
+        <a href="https://github.com/your-username/Cloud-Security" target="_blank">Cloud Security IBM</a>
+        <p>Implemented cloud data encryption and authentication modules using IBM Cloud tools.</p>
+      </div>
+      <div class="project-card">
+        <a href="https://github.com/your-username/IBM-Chatbot" target="_blank">IBM Chatbot</a>
+        <p>Built an AI-powered chatbot integrated with IBM Watson for smart Q&A responses.</p>
+      </div>
+      <div class="project-card">
+        <a href="https://github.com/your-username/Chatbot" target="_blank">Chatbot</a>
+        <p>A simple yet effective web-based chatbot built using Python and JavaScript.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="resume">
-        <div class="section-content" style="text-align: center;">
-            <h2>Resume</h2>
-            <a href="mycv.pdf" download="Syed_Ashraf_CV.pdf" class="download-button">Download CV</a>
-        </div>
-    </section>
+  <section id="resume" class="section-content" style="text-align: center;">
+    <h2>Resume</h2>
+    <a href="mycv.pdf" download="Syed_Ashraf_CV.pdf" class="download-button">📄 Download CV</a>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Syed Ashraf S.N</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Syed Ashraf S.N | Built with 💙 using HTML, CSS & JS</p>
+  </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 50,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+  <button id="scrollTopBtn">↑</button>
+
+  <script>
+    // Typing animation
+    const textArray = ["Cybersecurity Enthusiast", "AI & ML Explorer", "Cloud Computing Learner"];
+    let textIndex = 0, charIndex = 0;
+    const typingElement = document.getElementById("typing-text");
+
+    function type() {
+      if (charIndex < textArray[textIndex].length) {
+        typingElement.textContent += textArray[textIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        typingElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 50);
+      } else {
+        textIndex = (textIndex + 1) % textArray.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", type);
+
+    // Scroll animations
+    const sections = document.querySelectorAll('.section-content');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+
+    // Scroll to top button
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      scrollTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Dark/Light mode toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    const currentTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", currentTheme);
+    themeToggle.textContent = currentTheme === "dark" ? "🌙" : "☀️";
+
+    themeToggle.addEventListener("click", () => {
+      const newTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+      themeToggle.textContent = newTheme === "dark" ? "🌙" : "☀️";
+    });
+  </script>
 </body>
 </html>
