@@ -15,7 +15,7 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #121212;
+      background-color: #0f0f1a;
       color: #fff;
       overflow-x: hidden;
     }
@@ -23,8 +23,12 @@
     /* HEADER */
     header {
       background: linear-gradient(135deg, #4A90E2, #9013FE);
-      text-align: center;
-      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      flex-wrap: wrap;
       animation: gradientShift 10s ease infinite;
       background-size: 300% 300%;
     }
@@ -36,46 +40,52 @@
     }
 
     .profile-pic {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 3px solid #fff;
       object-fit: cover;
-      margin-bottom: 10px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+
+    .header-content {
+      text-align: left;
+      max-width: 400px;
     }
 
     .header-content h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 5px;
     }
 
     .header-content p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #e0e0e0;
       margin-bottom: 10px;
     }
 
     .social-links a {
       color: #fff;
-      margin: 0 8px;
-      font-size: 1.3rem;
+      margin-right: 10px;
+      font-size: 1.4rem;
       transition: transform 0.3s, color 0.3s;
+      display: inline-block;
     }
+
     .social-links a:hover { transform: translateY(-3px); color: #000; }
 
     /* NAVIGATION */
     nav {
-      background-color: #1F1F2E;
+      background-color: #181828;
       text-align: center;
-      padding: 8px 0;
+      padding: 10px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
 
     nav ul { list-style: none; }
-    nav ul li { display: inline-block; margin: 0 10px; }
+    nav ul li { display: inline-block; margin: 0 12px; }
     nav ul li a {
       color: #fff;
       text-decoration: none;
@@ -86,14 +96,14 @@
 
     /* SECTION */
     section {
-      padding: 1.5rem 0.8rem;
+      padding: 2rem 1rem;
       display: flex;
       justify-content: center;
     }
 
     .section-content {
-      background-color: #1E1E2E;
-      padding: 1.5rem;
+      background-color: #1b1b2e;
+      padding: 1.8rem;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(255,255,255,0.05);
       max-width: 850px;
@@ -116,20 +126,20 @@
     .section-content h2 {
       color: #4A90E2;
       text-align: center;
-      margin-bottom: 10px;
-      font-size: 1.5rem;
+      margin-bottom: 15px;
+      font-size: 1.6rem;
     }
 
     /* SKILLS */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 15px;
       margin-top: 15px;
     }
 
     .skill-card {
-      background-color: #2C2C3A;
+      background-color: #23233a;
       border-radius: 10px;
       text-align: center;
       padding: 1rem;
@@ -159,7 +169,7 @@
     .project-list i {
       color: #4A90E2;
       margin-right: 10px;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     .project-list a {
@@ -174,7 +184,7 @@
     .download-button {
       background-color: #E74C3C;
       color: #fff;
-      padding: 10px 20px;
+      padding: 10px 25px;
       border-radius: 25px;
       text-decoration: none;
       font-weight: 600;
@@ -192,7 +202,7 @@
     footer {
       text-align: center;
       padding: 1rem 0;
-      background-color: #181828;
+      background-color: #121223;
       color: #bbb;
       font-size: 0.9rem;
       margin-top: 10px;
@@ -203,8 +213,8 @@
 </head>
 <body>
   <header>
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
     <div class="header-content">
-      <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
       <h1>Syed Ashraf S.N</h1>
       <p>Computer Science Student | Cybersecurity & AI Enthusiast</p>
 
@@ -233,7 +243,7 @@
       <p>
         Hi, I'm <strong>Syed Ashraf</strong> — a Computer Science student passionate about 
         <strong>Cybersecurity</strong>, <strong>Artificial Intelligence</strong>, and <strong>Cloud Computing</strong>. 
-        I enjoy solving real-world problems, building creative projects, and constantly exploring new tech frontiers.
+        I love creating projects that bridge innovation with real-world impact, while continuously learning and exploring new technologies.
       </p>
     </div>
   </section>
@@ -253,9 +263,7 @@
         <div class="skill-card"><i class="fas fa-brain"></i><p>Artificial Intelligence</p></div>
         <div class="skill-card"><i class="fas fa-cloud"></i><p>Cloud Computing</p></div>
         <div class="skill-card"><i class="fab fa-python"></i><p>Python</p></div>
-        <div class="skill-card"><i class="fab fa-java"></i><p>Java</p></div>
         <div class="skill-card"><i class="fab fa-js-square"></i><p>JavaScript</p></div>
-        <div class="skill-card"><i class="fas fa-network-wired"></i><p>IoT</p></div>
       </div>
     </div>
   </section>
